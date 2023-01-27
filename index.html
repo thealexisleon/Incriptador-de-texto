@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/reset.css">   
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <header class="header">
+        <!--Encabezado de la pagina-->
+        <div >
+            <img class="logo" src="img/logo.png" alt="Logo de la pagína">
+        </div>
+    </header>
+    <main>
+        <!--Sección que marca el ingreso del texto-->
+        <section class="contenidoPrincipal">
+            <!--Div para el ingreso del texto-->
+            <div class="contenidoTexto">
+                <textarea name="textoEncriptar" id="textoEncriptar" cols="" rows="" placeholder="Ingrese el texto aquí"></textarea>
+            </div>
+            <!--Div para el warning-->
+            <div class="warning">
+                <img src="img/signo-de-exclamacion.png" alt="warning-text"><p>Solo letras minúsculas y sin acentos</p>
+            </div>
+            <!--Div de los botones-->
+            <div class="botones">
+                <button class="btnEncriptar">Encriptar</button>
+                <button class="btnDesencriptar">Desencriptar</button>
+            </div>
+        </section>
+
+         <!--Sección de la salida del texto-->
+        <section class="contenedorEncriptado">
+            <!--Div de la salida del texto-->
+            <div class="cardTextoEncriptado">
+                <img src="img/Desencriptado.png" alt="Logo Desencriptado" class="logoDesencriptado">
+                <h2>Ningun mensaje encontrado</h2>
+                <p>Ingresa el texto que desees encriptar o desencriptar</p>
+            </div>
+            <textarea name="textoEncriptado" id="textoEncriptado" cols="10" rows="30" class="encrypted-textarea" onkeyup="showTextarea(this.value)"></textarea>
+            <button class="btnCopiar">Copiar</button>
+        </section>
+    </main>
+    <script src="./index.js"></script>
+    <footer>
+        <h4>Primera prueba - Curso Alura x Oracle</h4>
+    </footer>
+</body>
+</html>
